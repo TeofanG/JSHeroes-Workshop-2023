@@ -12,17 +12,33 @@
     <header>
       <h1>GitHub Explorer</h1>
     </header>
-    <main>
-      <ul class="repo-cards">
+    <main class="content-wrapper">
+      <section>
+        <form class="search-form">
+          <input
+            class="input"
+            id="input";
+            type="search"
+            placeholder="Search repos..."
+            data-search
+          />
+          <button class="button" type="submit" id="search-repos-btn">
+            Search
+          </button>
+        </form>
+      </section>
+      <ul class="repo-cards" data-repo-cards-container>
         <!--       Card example     -->
-        <li>
-          <span>test header</span>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab earum perferendis provident? Architecto aut corporis cupiditate, id ipsum minus nihil nisi non nostrum, obcaecati omnis, perferendis provident qui rerum tempora!</span>
-          <section>
-            <p>Stars: 25</p>
-            <p>Forks: 44</p>
-          </section>
-        </li>
+        <template data-repo-template>
+          <li class="card">
+            <span class="c_title" data-header></span>
+            <span class="c_text" data-description></span>
+            <section class="c_footer">
+              <div data-stars></div>
+              <div data-forks></div>
+            </section>
+          </li>
+        </template>
       </ul>
     </main>
   </body>

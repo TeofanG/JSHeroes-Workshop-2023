@@ -1,3 +1,15 @@
+:root {
+  --color-primary: #0b1b44;
+  --color-background: #fff;
+  --color-border: #bbb;
+  --color-text: #202022;
+  --color-accent: #0098ff;
+  --color-accent-hover: #0b1b44;
+
+  --drop-shadow: 0 2px 8px 1px rgba(18, 18, 18, 0.3);
+  --animation-fade: all 0.1s ease-out;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -71,4 +83,79 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 15px;
+  padding: 30px;
+}
+
+.card {
+  margin-bottom: 10px;
+  border-style: solid;
+  padding: 15px;
+  border-width: 1px;
+  border-radius: 10px;;
+  transition: all 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--drop-shadow);
+  border-left-color: var(--color-accent);
+  border-left-width: 6px;
+}
+
+.c_title {
+  margin: auto;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.c_text {
+  display:inline-block;
+}
+
+.c_footer {
+  display: inline-block;
+  margin: 5px;
+}
+
+.search-form {
+  padding: 30px;
+  width: 100%;
+  margin: auto;
+}
+
+.input {
+  margin:auto;
+  border-width: 1px;
+  border-color: rgb(13, 121, 237);
+  border-radius: 5px 0px 0px 5px;
+  padding: 20px;
+  width: 1000px;
+}
+
+.input:hover{
+  border-radius: 0;
+  border-width: 1px;
+}
+
+.button {
+  margin: auto;
+  background: var(--color-accent);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0;
+  width: 100px;
+}
+
+.content-wrapper {
+  width: 1200px;
+  margin: auto;
 }
